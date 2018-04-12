@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Alex Huber.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -56,8 +56,28 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
+    print('Test 1')
+    print('expected: [1,2,3]')
+    print('actual: ',practice_problem2a([0,1,2],1))
+
+    print('Test 2')
+    print('expected: [-9,1]')
+    print('actual: ', practice_problem2a([-10,0],1))
+
+    print('Test 3')
+    print('expected: [10,11,12]')
+    print('actual: ', practice_problem2a([0,1,2],10))
+
+    print('Test 4')
+    print('expected: [2,2,2]')
+    print('actual: ', practice_problem2a([2,2,2],0))
 
 def practice_problem2a(sequence, delta):
+    for k in range(len(sequence)):
+        sequence[k] = sequence[k]+delta
+    return sequence
+
+
     """
     What comes in:
       -- A sequence of integers, e.g. ([2, 10, 5, -20, 8])
@@ -76,7 +96,7 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -170,13 +190,17 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    newstring = ''
+    for k in range(len(sequence)):
+        newstring = newstring + sequence[k][0]
+    return newstring
 
 
 # ----------------------------------------------------------------------
